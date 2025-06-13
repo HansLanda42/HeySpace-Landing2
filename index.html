@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #f0f0f0; }
+    #popup {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+    #popup-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="popup">
+    <div id="popup-content">
+      <h2>Hey there 👋</h2>
+      <p>Click below to view my HeySpace profile.</p>
+      <button onclick="goToProfile()">Enter</button>
+    </div>
+  </div>
+
+  <script>
+    function goToProfile() {
+      window.location.href = "https://hey.space/YOUR_USERNAME"; // Replace with your real profile URL
+    }
+  </script>
+</body>
+</html>
